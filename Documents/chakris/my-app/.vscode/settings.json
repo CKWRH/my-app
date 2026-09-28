@@ -1,0 +1,50 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.wrangler": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.wrangler": true,
+    "**/coverage": true
+  },
+  "editor.fontSize": 14,
+  "editor.wordWrap": "off",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "selection",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "npm.packageManager": "npm",
+  "workbench.editor.enablePreview": false,
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "readme",
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
+  },
+  "extensions.ignoreRecommendations": true,
+  "git.autofetch": false,
+  "telemetry.telemetryLevel": "off",
+  "window.restoreWindows": "preserve",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/.wrangler/**": true
+  },
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 10,
+  "workbench.editor.closeOnFileDelete": true,
+  "search.useIgnoreFiles": true,
+  "idf.currentSetup": "C:\\esp\\master\\esp-idf"
+}

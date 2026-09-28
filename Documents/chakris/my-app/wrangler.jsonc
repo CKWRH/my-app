@@ -1,0 +1,49 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-app",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2025-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "APP_NAME": "my-app"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "19d605ca8dd64e0493bf5f29211f7967"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "my-app-db",
+      "database_id": "56a52e6f-4e2c-47b4-a860-10ffccfb4e2b"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "AUTH_SESSION",
+        "class_name": "AuthSessionDurableObject"
+      },
+      {
+        "name": "REALTIME_ROOM",
+        "class_name": "RealtimeRoomDurableObject"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["AuthSessionDurableObject"]
+    },
+    {
+      "tag": "v2",
+      "new_sqlite_classes": ["RealtimeRoomDurableObject"]
+    }
+  ]
+}

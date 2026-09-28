@@ -1,0 +1,38 @@
+{
+  "name": "my-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
+    "cf:typegen": "wrangler types --env-interface CloudflareBindings",
+    "deploy": "wrangler deploy",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down"
+  },
+  "dependencies": {
+    "hono": "^4.6.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.61.0",
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.6.3",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.4",
+    "wrangler": "^3.83.0"
+  }
+}
